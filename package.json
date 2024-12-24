@@ -11,13 +11,18 @@
     "type": "git",
     "url": "https://github.com/jackyzha0/quartz.git"
   },
+  "bin": {
+    "quartz": "./quartz/bootstrap-cli.mjs"
+  },
   "scripts": {
     "quartz": "./quartz/bootstrap-cli.mjs",
     "docs": "npx quartz build --serve -d docs",
     "check": "tsc --noEmit && npx prettier . --check",
     "format": "npx prettier . --write",
     "test": "tsx ./quartz/util/path.test.ts && tsx ./quartz/depgraph.test.ts",
-    "profile": "0x -D prof ./quartz/bootstrap-cli.mjs build --concurrency=1"
+    "profile": "0x -D prof ./quartz/bootstrap-cli.mjs build --concurrency=1",
+    "build": "pnpm quartz build",
+    "dev": "pnpm quartz build --serve"
   },
   "engines": {
     "npm": ">=9.3.1",
@@ -31,13 +36,10 @@
     "blog",
     "quartz"
   ],
-  "bin": {
-    "quartz": "./quartz/bootstrap-cli.mjs"
-  },
   "dependencies": {
     "@clack/prompts": "^0.9.0",
     "@floating-ui/dom": "^1.6.12",
-    "@myriaddreamin/rehype-typst": "^0.5.0-rc9",
+    "@myriaddreamin/rehype-typst": "0.5.0-rc9",
     "@napi-rs/simple-git": "0.1.19",
     "@tweenjs/tween.js": "^25.0.0",
     "async-mutex": "^0.5.0",
@@ -112,5 +114,6 @@
     "prettier": "^3.4.2",
     "tsx": "^4.19.2",
     "typescript": "^5.7.2"
-  }
+  },
+  "packageManager": "pnpm@9.15.1+sha512.1acb565e6193efbebda772702950469150cf12bcc764262e7587e71d19dc98a423dff9536e57ea44c49bdf790ff694e83c27be5faa23d67e0c033b583be4bfcf"
 }
