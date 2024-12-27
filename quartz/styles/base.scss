@@ -24,6 +24,7 @@ section {
   padding: 0 0.1rem;
   border-radius: 5px;
 }
+
 ::selection {
   background: color-mix(in srgb, var(--tertiary) 60%, rgba(255, 255, 255, 0));
   color: var(--darkgray);
@@ -90,6 +91,7 @@ a {
       border-radius: 0;
       padding: 0;
     }
+
     &.tag-link {
       &::before {
         content: "#";
@@ -101,7 +103,7 @@ a {
     height: 1ex;
     margin: 0 0.15em;
 
-    > path {
+    >path {
       fill: var(--dark);
     }
   }
@@ -109,6 +111,7 @@ a {
 
 .desktop-only {
   display: initial;
+
   @media all and ($mobile) {
     display: none;
   }
@@ -116,6 +119,7 @@ a {
 
 .mobile-only {
   display: none;
+
   @media all and ($mobile) {
     display: initial;
   }
@@ -124,8 +128,9 @@ a {
 .page {
   max-width: calc(#{map.get($breakpoints, desktop)} + 300px);
   margin: 0 auto;
+
   & article {
-    & > h1 {
+    &>h1 {
       font-size: 2rem;
     }
 
@@ -140,23 +145,24 @@ a {
       color: var(--gray);
     }
 
-    & li > * {
+    & li>* {
       margin-top: 0;
       margin-bottom: 0;
     }
 
-    p > strong {
+    p>strong {
       color: var(--dark);
     }
   }
 
-  & > #quartz-body {
+  &>#quartz-body {
     display: grid;
     grid-template-columns: #{map.get($desktopGrid, templateColumns)};
     grid-template-rows: #{map.get($desktopGrid, templateRows)};
     column-gap: #{map.get($desktopGrid, columnGap)};
     row-gap: #{map.get($desktopGrid, rowGap)};
     grid-template-areas: #{map.get($desktopGrid, templateAreas)};
+
     @media all and ($tablet) {
       grid-template-columns: #{map.get($tabletGrid, templateColumns)};
       grid-template-rows: #{map.get($tabletGrid, templateRows)};
@@ -164,6 +170,7 @@ a {
       row-gap: #{map.get($tabletGrid, rowGap)};
       grid-template-areas: #{map.get($tabletGrid, templateAreas)};
     }
+
     @media all and ($mobile) {
       grid-template-columns: #{map.get($mobileGrid, templateColumns)};
       grid-template-rows: #{map.get($mobileGrid, templateRows)};
@@ -175,6 +182,7 @@ a {
     @media all and not ($desktop) {
       padding: 0 1rem;
     }
+
     @media all and ($mobile) {
       margin: 0 auto;
     }
@@ -193,6 +201,7 @@ a {
       z-index: 1;
       grid-area: grid-sidebar-left;
       flex-direction: column;
+
       @media all and ($mobile) {
         gap: 0;
         align-items: center;
@@ -209,24 +218,29 @@ a {
       grid-area: grid-sidebar-right;
       margin-right: 0;
       flex-direction: column;
+
       @media all and ($mobile) {
         margin-left: inherit;
         margin-right: inherit;
       }
+
       @media all and not ($desktop) {
         position: initial;
         height: unset;
         width: 100%;
         flex-direction: row;
         padding: 0;
-        & > * {
+
+        &>* {
           flex: 1;
         }
-        & > .toc {
+
+        &>.toc {
           display: none;
         }
       }
     }
+
     & .page-header,
     & .page-footer {
       margin-top: 1rem;
@@ -235,13 +249,14 @@ a {
     & .page-header {
       grid-area: grid-header;
       margin: $topSpacing 0 0 0;
+
       @media all and ($mobile) {
         margin-top: 0;
         padding: 0;
       }
     }
 
-    & .center > article {
+    & .center>article {
       grid-area: grid-center;
     }
 
@@ -255,14 +270,17 @@ a {
       min-width: 100%;
       margin-left: auto;
       margin-right: auto;
+
       @media all and ($tablet) {
         margin-right: 0;
       }
+
       @media all and ($mobile) {
         margin-right: 0;
         margin-left: 0;
       }
     }
+
     & footer {
       margin-left: 0;
     }
@@ -325,7 +343,7 @@ thead {
   font-weight: revert;
   margin-bottom: 0;
 
-  article > & > a[role="anchor"] {
+  article>&>a[role="anchor"] {
     color: var(--dark);
     background-color: transparent;
   }
@@ -337,7 +355,7 @@ h3,
 h4,
 h5,
 h6 {
-  &[id] > a[href^="#"] {
+  &[id]>a[href^="#"] {
     margin: 0 0.5rem;
     opacity: 0;
     transition: opacity 0.2s ease;
@@ -346,7 +364,7 @@ h6 {
     user-select: none;
   }
 
-  &[id]:hover > a {
+  &[id]:hover>a {
     opacity: 1;
   }
 }
@@ -384,7 +402,7 @@ figure[data-rehype-pretty-code-figure] {
   line-height: 1.6rem;
   position: relative;
 
-  & > [data-rehype-pretty-code-title] {
+  &>[data-rehype-pretty-code-title] {
     font-family: var(--codeFont);
     font-size: 0.9rem;
     padding: 0.1rem 0.5rem;
@@ -395,7 +413,7 @@ figure[data-rehype-pretty-code-figure] {
     color: var(--darkgray);
   }
 
-  & > pre {
+  &>pre {
     padding: 0;
   }
 }
@@ -412,7 +430,7 @@ pre {
     border: none;
   }
 
-  & > code {
+  &>code {
     background: none;
     padding: 0;
     font-size: 0.85rem;
@@ -427,7 +445,7 @@ pre {
       border-radius: 5px;
     }
 
-    & > [data-line] {
+    &>[data-line] {
       padding: 0 0.25rem;
       box-sizing: border-box;
       border-left: 3px solid transparent;
@@ -448,11 +466,11 @@ pre {
       }
     }
 
-    &[data-line-numbers-max-digits="2"] > [data-line]::before {
+    &[data-line-numbers-max-digits="2"]>[data-line]::before {
       width: 2rem;
     }
 
-    &[data-line-numbers-max-digits="3"] > [data-line]::before {
+    &[data-line-numbers-max-digits="3"]>[data-line]::before {
       width: 3rem;
     }
   }
@@ -470,13 +488,13 @@ code {
 tbody,
 li,
 p {
-  line-height: 1.6rem;
+  line-height: 1.75em;
 }
 
 .table-container {
   overflow-x: auto;
 
-  & > table {
+  &>table {
     margin: 1rem;
     padding: 1.5rem;
     border-collapse: collapse;
@@ -486,7 +504,7 @@ p {
       min-width: 75px;
     }
 
-    & > * {
+    &>* {
       line-height: 2rem;
     }
   }
@@ -504,6 +522,7 @@ td {
 
 tr {
   border-bottom: 1px solid var(--lightgray);
+
   &:last-child {
     border-bottom: none;
   }
@@ -515,7 +534,7 @@ img {
   margin: 1rem 0;
 }
 
-p > img + em {
+p>img+em {
   display: block;
   transform: translateY(-1rem);
 }
@@ -553,9 +572,10 @@ ol.overflow {
   content: "";
   clear: both;
 
-  & > li:last-of-type {
+  &>li:last-of-type {
     margin-bottom: 30px;
   }
+
   /*&:after {
     pointer-events: none;
     content: "";
