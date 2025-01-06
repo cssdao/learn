@@ -51,7 +51,7 @@ keywords: 脚本，
 
 - 选择所在的服务器指定频道，在URL中选择 **复制 ID**，并填写到 `config.csv` 中对应的字段。 
 
-![参考操作步骤](https://static.learn.css.show/discord_id.jpg)
+![参考操作步骤](https://static.learn.css.show/discord-id.jpg)
 
 ---
 
