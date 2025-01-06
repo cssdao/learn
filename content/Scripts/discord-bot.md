@@ -30,33 +30,35 @@ keywords: 脚本，
 - **token**: Discord 登录 Token。
 - **guildId**: 服务器 ID。
 - **channelId**: 指定频道 ID。
-- **proxy**: 代理 IP。
+- **proxy**: 代理 IP。（一个Token对应一个IP，防止被封）
 - **gapTime**: 随机回复时间间隔。
 - **lastMessageId**: 可留空。
 
-👉 [参考配置文件示例](https://static.learn.css.show/discord_csv.jpg)
+![参考配置文件示例](https://static.learn.css.show/discord_csv.jpg)
 
 ---
 
 #### **2️⃣ 获取 Discord Token**
 
 - 打开 Discord，按 `F12` 调出开发者工具。
-- 按照下图步骤操作，复制 Token 并粘贴到 `config.csv` 文件中。  
-    👉 [查看操作步骤](https://static.learn.css.show/discord_token.jpg)
+- 按照下图步骤操作，复制 Token 并粘贴到 `config.csv` 文件中。 
+
+![查看操作步骤](https://static.learn.css.show/discord_token.jpg)
 
 ---
 
 #### **3️⃣ 获取目标频道和服务器 ID**
 
-- 右键目标服务器和频道名称，选择 **复制 ID**，并填写到 `config.csv` 中对应的字段。  
-    👉 [参考操作步骤](https://static.learn.css.show/discord_id.jpg)
+- 选择所在的服务器指定频道，在URL中选择 **复制 ID**，并填写到 `config.csv` 中对应的字段。 
+
+![参考操作步骤](https://static.learn.css.show/discord_id.jpg)
 
 ---
 
 #### **4️⃣ 启动智能互动**
 
 - 使用机器人模拟真实用户行为，与社区进行对话。
-- 建议参与以下活动：
+- 机器人可以参与以下活动：
     - 发言交流：在主题相关的讨论中表达见解。
     - 提问互动：与社区管理员或成员沟通问题。
     - 参与讨论：对其他用户的发言进行点赞、回复。
