@@ -123,7 +123,7 @@ export default (() => {
 
     const iconPath = joinSegments(baseDir, "static/icon.png")
 
-    const ogImageDefaultPath = `https://${cfg.baseUrl}/static/og-image.png`
+    const ogImageDefaultPath = `https://${cfg.baseUrl}/static/og-image.jpg`
     // "static/social-images/slug-filename.md.webp"
     const ogImageGeneratedPath = `https://${cfg.baseUrl}/${fileDir.replace(
       `${ctx.argv.output}/`,
@@ -165,6 +165,7 @@ export default (() => {
             <link rel="stylesheet" href={googleFontHref(cfg.theme)} />
           </>
         )}
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossOrigin={"anonymous"} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         {/* OG/Twitter meta tags */}
         <meta name="og:site_name" content={cfg.pageTitle}></meta>
