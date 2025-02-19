@@ -13,7 +13,7 @@ keywords: 脚本，
 
 作为一名专业的撸毛党，这一案例为我带来了启发。为了更高效地获取早期身份，我开发了一款 **Discord 聊天机器人**。
 
-- **核心功能**：借助AI大模型，实现智能对话和社区互动，从而更轻松地获得 OG 等早期角色。
+- **核心功能**：借助 AI 大模型，实现智能对话和社区互动，从而更轻松地获得 OG 等早期角色。
 - **优势**：自动化交互、高效获取角色，省时省力，专为撸毛爱好者设计。
 
 ---
@@ -30,7 +30,7 @@ keywords: 脚本，
 - **token**: Discord 登录 Token。
 - **guildId**: 公会 ID。
 - **channelId**: 指定频道 ID。
-- **proxy**: 代理 IP。（一个Token对应一个IP，防止被封）
+- **proxy**: 代理 IP。（一个 Token 对应一个 IP，防止被封）
 - **gapTime**: 随机回复时间间隔。
 
 ![参考配置文件示例](https://static.learn.css.show/discord_csv.jpg)
@@ -48,7 +48,7 @@ keywords: 脚本，
 
 #### **3️⃣ 获取目标频道和公会 ID**
 
-- 选择所在的服务器指定频道，在URL中选择 **复制 ID**，并填写到 `config.csv` 中对应的字段。 
+- 选择所在的服务器指定频道，在 URL 中选择 **复制 ID**，并填写到 `config.csv` 中对应的字段。 
 
 ![参考操作步骤](https://static.learn.css.show/discord-id.jpg)
 
