@@ -35,7 +35,9 @@ export async function getSatoriFont(headerFontName: string, bodyFontName: string
 async function fetchTtf(fontName: string, weight: FontWeight): Promise<ArrayBuffer> {
   try {
     // Get css file from google fonts
-    const cssResponse = await fetch(`https://fonts.googleapis.com/css?family=${fontName}:${weight}`)
+    const cssResponse = await fetch(
+      `https://fonts.googleapis.com/css2?family=${fontName}:wght@${weight}`,
+    )
     const css = await cssResponse.text()
 
     // Extract .ttf url from css file
@@ -142,7 +144,7 @@ export const defaultImage: SocialImageOptions["imageStructure"] = (
   _fileData: QuartzPluginData,
 ) => {
   // How many characters are allowed before switching to smaller font
-  const fontBreakPoint = 22
+  const fontBreakPoint = 10
   const useSmallerFont = title.length > fontBreakPoint
 
   // Setup to access image
@@ -180,6 +182,7 @@ export const defaultImage: SocialImageOptions["imageStructure"] = (
             color: cfg.theme.colors[colorScheme].dark,
             fontSize: useSmallerFont ? 70 : 82,
             fontFamily: fonts[0].name,
+            lineHeight: 1.1,
           }}
         >
           {title}
@@ -190,6 +193,11 @@ export const defaultImage: SocialImageOptions["imageStructure"] = (
           color: cfg.theme.colors[colorScheme].dark,
           fontSize: 44,
           lineClamp: 3,
+          overflow: "hidden",
+          textOverflow: "ellipsis",
+          display: "-webkit-box",
+          WebkitLineClamp: 3,
+          WebkitBoxOrient: "vertical",
           fontFamily: fonts[1].name,
         }}
       >

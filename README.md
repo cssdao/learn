@@ -1,7 +1,18 @@
-# Crypto Startup School
+# Quartz v4
 
-## 1. 贡献方式
+> “[One] who works with the door open gets all kinds of interruptions, but [they] also occasionally gets clues as to what the world is and what might be important.” — Richard Hamming
 
-1. 使用 Obsidian 编辑器，打开 `content` 文件夹，创建 markdown 文件或者文件夹，文件夹名称即为课程名称，文件夹内为课程内容。注意：不能删除 `index.md` 文件。
-2. 创建完成后，提交 PR 到 `main` 分支。
-3. 等待审核通过后，即可在 `https://learn.css.show/` 查看课程内容。
+Quartz is a set of tools that helps you publish your [digital garden](https://jzhao.xyz/posts/networked-thought) and notes as a website for free.
+Quartz v4 features a from-the-ground rewrite focusing on end-user extensibility and ease-of-use.
+
+🔗 Read the documentation and get started: https://quartz.jzhao.xyz/
+
+[Join the Discord Community](https://discord.gg/cRFFHYye7t)
+
+## Sponsors
+
+<p align="center">
+  <a href="https://github.com/sponsors/jackyzha0">
+    <img src="https://cdn.jsdelivr.net/gh/jackyzha0/jackyzha0/sponsorkit/sponsors.svg" />
+  </a>
+</p>
