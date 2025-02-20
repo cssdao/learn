@@ -4,7 +4,7 @@ keywords: 测试网，Monad，Web3，撸空投
 ---
 ### **上手指南，解锁 Web3 新机会 🚀**
 
-大家好！期待已久的 **Monad 测试网** 终于上线啦！作为下一代高性能 **Layer 1 区块链**，Monad 凭借 **10,000 TPS** 的超高速交易性能、**EVM 兼容性** 和 **超 2.5 亿美金的融资** 支持，迅速吸引了 Web3 爱好者的关注。🔥 
+大家好！期待已久的 **Monad 测试网** 终于上线啦！作为下一代高性能 **Layer 1 区块链**，Monad 凭借 **10,000 TPS** 的超高速交易性能、**EVM 兼容性** 和 **超 2.5 亿美金的融资** 支持，迅速吸引了Web3爱好者的关注。🔥 
 
 下面，让我带你一步步完成 Monad 测试网的入门操作，包括 **如何领取测试水** 和 **参与主要交互任务**，快来一起玩转 Monad 吧！
 
@@ -37,7 +37,8 @@ keywords: 测试网，Monad，Web3，撸空投
 
 **优势**：无余额要求，适合所有用户
 
-- **链接**：[Monad 官网 Faucet](https://testnet.monad.xyz/)
+- **链接 1**：[Monad 官网 Faucet](https://testnet.monad.xyz/)
+- **链接 2**：[aPriori Faucet](https://stake.apr.io/faucet)
 - **领取条件**：无最低余额要求，但可能因访问人数较多而出现卡顿。
 - **操作步骤**：
     1. 进入 Monad 官网并连接 EVM 兼容钱包（如 **Phantom** 或 **MetaMask**）。
