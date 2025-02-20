@@ -16,7 +16,7 @@ keywords: 测试代币
 6️⃣ **[QuickNode Faucet](https://faucet.quicknode.com/ethereum/goerli)**：需主网钱包有 **0.001 ETH**。  
 7️⃣ **[All That Node](https://www.allthatnode.com/faucet/ethereum.dsrv)**：偶尔不可用，但仍是备用选择。  
 8️⃣ **[Coinbase Faucet](https://coinbase.com/faucets)**：需下载 Coinbase 钱包插件，每次可领取 **0.1 Sepolia ETH**。  
-9️⃣ **[Grabteeth](https://grabteeth.xyz/)**：开发者专属，一次可领取 **10 个 Goerli 和 Sepolia 测试 ETH**。 
+9️⃣ **[Grabteeth](https://grabteeth.xyz/)**：开发者专属，一次可领取 **10 个 Goerli 和 Sepolia 测试 ETH**。    
 🔟 **[Paradigm Faucet](https://faucet.paradigm.xyz/)**：需登录推特（账户需满足 **1 条推文、50 位关注者，存在超过 1 个月**）。
 
 📌  **经验建议**：新地址推荐使用 [PK910 Faucet](https://sepolia-faucet.pk910.de/) 的挖矿方式领取测试代币。
