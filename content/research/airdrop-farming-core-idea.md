@@ -1,6 +1,7 @@
 ---
 title: 撸大毛核心思想
 keywords: Web3，CryptoAirdrop，撸毛心得，空投策略
+date: 2025.1.1
 ---
 ## **撸大毛心得：低成本高收益的策略分享 🚀**
 

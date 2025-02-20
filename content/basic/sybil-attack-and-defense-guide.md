@@ -1,6 +1,7 @@
 ---
 title: 女巫攻击与防范指南
 keywords: Sybil Attack
+date: 2025.1.2
 ---
 本文分为四部分，帮你快速了解 **女巫攻击（Sybil Attack）** 的核心知识：
 
