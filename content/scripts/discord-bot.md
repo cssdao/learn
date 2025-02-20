@@ -1,6 +1,6 @@
 ---
 title: Discord Bot
-keywords: 脚本，
+keywords: 脚本，Discord
 ---
 💡 **Web3 社区为了鼓励和促进早期用户的参与，通常会为加入 Discord 的用户授予特殊角色**（如 OG、Early Member 等）。这些角色不仅是社区的荣誉标志，还可能带来实际的空投奖励。例如：
 
