@@ -15,7 +15,7 @@ _不是广告，只是多年实战经验筛选出的优质资源，供大家参�
 | VPN 推荐   | [飞毯](https://qkdl.aff-tanzcloud.top/auth/register?code=qkdL) | 稳定使用两年多，速度快、稳定性高，完全满足撸毛需求。                                 |
 | TG号养成    | [教程](https://www.youtube.com/watch?v=RuQt4Ey4fUk)            | 模拟器多开，清除登录设备，短信不断验证，直到提示绑定邮箱为止。                            |
 | IP 购买    | [Proxy-Seller](https://proxy-seller.com/)                    | 价格稍贵但质量好，挂 depin 完全可以。                                     |
-| IP 购买    | [Webshare](https://dashboard.webshare.io/)                   | 价格便宜                                                       |
+| IP 购买    | [Webshare](https://dashboard.webshare.io/)                   | 价格便宜，有免费额度                                                 |
 
 ---
 
