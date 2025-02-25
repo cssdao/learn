@@ -84,6 +84,9 @@ const config: QuartzConfig = {
       Plugin.ContentIndex({
         enableSiteMap: true,
         enableRSS: true,
+        enableLLMSText: true,
+        enableLLMSFullText: true,
+        llmsLimit: 200,
       }),
       Plugin.Assets(),
       Plugin.Static(),

@@ -26,6 +26,9 @@ interface Options {
   rssLimit?: number
   rssFullHtml: boolean
   includeEmptyFiles: boolean
+  enableLLMSText: boolean
+  enableLLMSFullText: boolean
+  llmsLimit?: number
 }
 
 const defaultOptions: Options = {
@@ -34,6 +37,9 @@ const defaultOptions: Options = {
   rssLimit: 10,
   rssFullHtml: false,
   includeEmptyFiles: true,
+  enableLLMSText: false,
+  enableLLMSFullText: false,
+  llmsLimit: 200,
 }
 
 function generateSiteMap(cfg: GlobalConfiguration, idx: ContentIndex): string {
@@ -46,6 +52,67 @@ function generateSiteMap(cfg: GlobalConfiguration, idx: ContentIndex): string {
     .map(([slug, content]) => createURLEntry(simplifySlug(slug), content))
     .join("")
   return `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">${urls}</urlset>`
+}
+
+function generateLLMSText(cfg: GlobalConfiguration, idx: ContentIndex, limit?: number, fullContent: boolean = false): string {
+  const base = cfg.baseUrl ?? ""
+
+  // Sort entries by date, newest first
+  const sortedEntries = Array.from(idx)
+    .sort(([_, f1], [__, f2]) => {
+      if (f1.date && f2.date) {
+        return f2.date.getTime() - f1.date.getTime()
+      } else if (f1.date && !f2.date) {
+        return -1
+      } else if (!f1.date && f2.date) {
+        return 1
+      }
+      return f1.title.localeCompare(f2.title)
+    })
+    .slice(0, limit ?? idx.size)
+
+  // Generate header
+  let content = `# ${escapeHTML(cfg.pageTitle)}\n\n`
+  content += `## Overview\n\n`
+  content += `This is the LLMS Text file for ${escapeHTML(cfg.pageTitle)}. `
+  content += `It contains structured information about the content of this site for LLM reference.\n\n`
+
+  // Add site description or metadata
+  content += `## Site Information\n\n`
+  content += `- Base URL: https://${base}\n`
+  content += `- Total entries: ${sortedEntries.length}\n\n`
+
+  // Add content entries
+  content += `## Content\n\n`
+
+  for (const [slug, details] of sortedEntries) {
+    const simpleSlug = simplifySlug(slug)
+    content += `### ${escapeHTML(details.title)}\n\n`
+    content += `- URL: https://${joinSegments(base, encodeURI(simpleSlug))}\n`
+
+    if (details.date) {
+      content += `- Date: ${details.date.toISOString().split('T')[0]}\n`
+    }
+
+    if (details.tags && details.tags.length > 0) {
+      content += `- Tags: ${details.tags.join(', ')}\n`
+    }
+
+    if (details.description) {
+      content += `\n${details.description}\n\n`
+    }
+
+    // For the full version, include the full content
+    if (fullContent && details.content) {
+      content += `\n---\n\n${details.content}\n\n---\n\n`
+    }
+  }
+
+  // Add footer
+  content += `\n## Generated\n\n`
+  content += `This LLMS Text file was generated on ${new Date().toISOString().split('T')[0]} using learn.css.show.\n`
+
+  return content
 }
 
 function generateRSSFeed(cfg: GlobalConfiguration, idx: ContentIndex, limit?: number): string {
@@ -83,7 +150,7 @@ function generateRSSFeed(cfg: GlobalConfiguration, idx: ContentIndex, limit?: nu
       <description>${!!limit ? i18n(cfg.locale).pages.rss.lastFewNotes({ count: limit }) : i18n(cfg.locale).pages.rss.recentNotes} on ${escapeHTML(
         cfg.pageTitle,
       )}</description>
-      <generator>Quartz -- quartz.jzhao.xyz</generator>
+      <generator>CSSDAO -- learn.css.show</generator>
       ${items}
     </channel>
   </rss>`
@@ -153,6 +220,28 @@ export const ContentIndex: QuartzEmitterPlugin<Partial<Options>> = (opts) => {
             content: generateRSSFeed(cfg, linkIndex, opts.rssLimit),
             slug: "index" as FullSlug,
             ext: ".xml",
+          }),
+        )
+      }
+
+      if (opts?.enableLLMSText) {
+        emitted.push(
+          await write({
+            ctx,
+            content: generateLLMSText(cfg, linkIndex, opts.llmsLimit, false),
+            slug: "llms" as FullSlug,
+            ext: ".txt",
+          }),
+        )
+      }
+
+      if (opts?.enableLLMSFullText) {
+        emitted.push(
+          await write({
+            ctx,
+            content: generateLLMSText(cfg, linkIndex, opts.llmsLimit, true),
+            slug: "llms-full" as FullSlug,
+            ext: ".txt",
           }),
         )
       }
