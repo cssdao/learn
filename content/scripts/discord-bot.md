@@ -19,7 +19,7 @@ date: 2025.1.18
 
 ---
 
-#### 🤖 机器人核心功能
+### 🤖 机器人核心功能
 
 #### ✅ **自动化互动，提升账号权重**
 
@@ -37,7 +37,7 @@ date: 2025.1.18
 
 ---
 
-#### 🚀 快速上手指南
+### 🚀 快速上手指南
 
 #### 1️⃣ **创建 `config.xlsx` 配置文件**
 
@@ -86,7 +86,7 @@ abc123, 987654321, 123456789, 192.168.1.1:8080, 30-60
 
 ---
 
-#### 🚀 启动执行命令
+### ⚡启动执行命令
 
 ```sh
 docker run -e GEMINI_API_KEY=<GEMINI_API_KEY> -e TOKEN=<TOKEN> -v ./config:/app/config ghcr.io/cssdao/discord_ai_bot:latest
@@ -99,7 +99,7 @@ docker run -e GEMINI_API_KEY=<GEMINI_API_KEY> -e TOKEN=<TOKEN> -v ./config:/app/
 
 ---
 
-#### 🔄 更新机器人
+### 🔄 更新机器人
 
 ```sh
 docker pull ghcr.io/cssdao/discord_ai_bot:latest
@@ -109,7 +109,7 @@ docker pull ghcr.io/cssdao/discord_ai_bot:latest
 
 ---
 
-#### ⚠️ 注意事项
+### ⚠️ 注意事项
 
 - **合理使用**：避免过度操作，防止账号异常。
 - **保护隐私**：谨慎保管 Token 和代理 IP，防止泄露。
