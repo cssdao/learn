@@ -1,5 +1,5 @@
 ---
-title: 币安独家 TGE 打新全流程指南🚀
+title: 币安独家 TGE 打新教程
 keywords: Web3，撸空投，打新，TGE
 date: 2025.3.26
 ---
